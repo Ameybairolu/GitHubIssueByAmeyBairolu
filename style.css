@@ -1,5 +1,7 @@
 div,
 body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -19,6 +21,16 @@ a:active {
   text-decoration: none;
 }
 
+a:hover {
+  background-color: inherit;
+  color: rgb(66, 66, 238);
+}
+a {
+  overflow: visible;
+}
+
+/* Container for all issues */
+
 .issues-container {
   padding-top: 2rem;
   margin: auto;
@@ -26,6 +38,8 @@ a:active {
   background-color: white;
   height: 100vh;
 }
+
+/* Styling for each issue */
 .issue {
   padding: 5px 0px;
   display: flex;
@@ -35,26 +49,27 @@ a:active {
   border-bottom: 1px solid #d0d7de;
   cursor: pointer;
 }
-.issue:hover {
-  background-color: #ebedf0;
-}
 
 .issue-title {
   font-size: 20px;
   font-weight: 500;
 }
+
 .id_time {
   font-size: 15px;
   font-weight: 400;
   color: #949494;
 }
 
+/* Status alignment (The area with green dots) */
 .status {
   display: flex;
   justify-content: center;
   height: inherit;
   width: 10%;
 }
+
+/* Description styling */
 .description {
   display: flex;
   flex-direction: column;
@@ -62,6 +77,8 @@ a:active {
   height: inherit;
   width: 80%;
 }
+
+/* Assignee's styling (area with a circular picture) */
 .assignee {
   display: flex;
   flex-direction: row;
@@ -77,9 +94,6 @@ a:active {
   border-radius: 50%;
   overflow: hidden;
 }
-a {
-  overflow: visible;
-}
 
 img {
   width: 20px;
@@ -90,6 +104,8 @@ img {
   display: none;
 }
 
+/* If comments present, styling for that */
+
 .comments {
   display: flex;
   align-items: center;
@@ -97,6 +113,8 @@ img {
   height: inherit;
   width: 10%;
 }
+
+/* To make the page responsive */
 
 @media (max-width: 768px) {
   .issue {
