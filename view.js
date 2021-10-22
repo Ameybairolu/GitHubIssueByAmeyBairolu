@@ -14,7 +14,7 @@ class View {
           </div>
           <div class="description">
             <div class="issue-title">
-              ${eachObject.title}
+              <a href="${eachObject.url}">${eachObject.title}</a>
             </div>
             <div class="id_time">#${eachObject.number} opened ${this._getNumberOfDays(new Date(eachObject.updated_at))} days ago by <a href="${eachObject.user.url}">${eachObject.user.login}</a></div>
           </div>
